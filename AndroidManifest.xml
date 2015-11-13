@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.bct.gpstracker"
+          android:versionCode="86"
+          android:versionName="1.2.17 final (2015-10-26)">
+
+    <uses-sdk
+            android:minSdkVersion="14"
+            android:targetSdkVersion="23"/>
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="alndroid.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="getui.permission.GetuiService.com.bct.gpstracker"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission  android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <!--自定义权限-->
+    <permission
+            android:name="getui.permission.GetuiService.com.bct.gpstracker"
+            android:protectionLevel="normal">
+    </permission>
+    <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <!-- 自动聚焦权限 -->
+
+    <application
+            android:name=".AppContext"
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+        <activity
+                android:name=".ui.LauncherActivity"
+                android:label="@string/app_name"
+                android:launchMode="singleTask"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="base_url" android:value="http://114.119.6.134/gps"/>
+        <meta-data android:name="chat_server_ip" android:value="114.119.6.134 38899"/>
+        <meta-data android:name="site" android:value="http://114.119.6.134/apk/bbx.html"/>
+
+        <meta-data
+                android:name="DB_NAME"
+                android:value="xx.db"/>
+        <meta-data
+                android:name="DB_VERSION"
+                android:value="10"/>
+        <meta-data
+                android:name="xfyun_appid"
+                android:value="56035739"/>
+
+        <meta-data
+                android:name="com.amap.api.v2.apikey"
+                android:value="1795a43b318d9e94b2452abc6fadbcdf"/>
+
+        <receiver
+                android:name=".receiver.TrackerReceiver"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xx.MSG_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.CommunicationService">
+            <intent-filter>
+                <action android:name="com.xx.communicationService"/>
+            </intent-filter>
+        </service>
+        <service android:name=".service.PlayerService" />
+        <service android:name=".service.BlueToothService"/>
+        <service android:name=".service.ExceptionCatchService"/>
+
+        <activity
+                android:name=".base.BaseActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".MainActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustPan"/>
+        <activity
+                android:name=".baby.activity.ChatActivity"
+                android:screenOrientation="portrait"
+                />
+        <activity
+                android:name=".my.activity.SettingActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".my.activity.AccountManagerActivity"
+                android:screenOrientation="portrait"
+                />
+        <activity
+                android:name=".ui.ImageZoomActivity"
+                android:screenOrientation="sensor"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
+                android:name=".base.CommTitleActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.RegistActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize"/>
+        <activity
+                android:name=".my.activity.FenceActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.ChoiceTimeActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.AboutUsActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.LoginActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustPan"/>
+        <activity
+                android:name=".ui.GuideActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.ProtocolActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.AccountActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".baby.activity.WarnActivity"
+                android:screenOrientation="portrait" android:launchMode="singleInstance"/>
+        <activity
+                android:name=".my.activity.MsgCenterActivity"
+                android:screenOrientation="portrait" android:launchMode="singleInstance"/>
+        <activity
+                android:name=".baby.activity.RecorrectActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.AddUserActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.AddDeviceActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".found.FoundDetailActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.VoiceCollectActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.DeviceRestActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.FenceSetupActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.FenceListActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.MessageSwitchActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.AlarmActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.AddAlarmActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".baby.activity.NavigatorActivity"
+                android:configChanges="orientation|screenSize|keyboard|keyboardHidden"/>
+        <activity
+                android:name=".baby.activity.NavigatorEntryActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.NoDisplay"/>
+        <activity
+                android:name=".ui.FindPwdActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.UpdatePwdActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".babygroup.CommentFileActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".babygroup.BabyPublishContentActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.DSPManagerActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".my.activity.DSPSelectorActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".my.activity.RemoteControlAvtivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".baby.activity.BluetoothActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".my.activity.AddGoodFriendsActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".my.activity.TerminalEmojiSet"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".my.activity.WifiActivity"/>
+        <activity android:name=".ui.SendErrorActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/bklistDialog"/>
+        <activity android:name=".ui.LoadingActivity"
+                  android:screenOrientation="portrait"/>
+
+
+        <!-- 隐藏键盘 -->
+        <!-- 全屏 -->
+        <activity
+                android:name=".zxing.CaptureActivity"
+                android:configChanges="orientation|keyboardHidden"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+        <activity
+                android:name=".qrcode.CaptureActivity"
+                android:configChanges="orientation|keyboardHidden"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+    </application>
+    <supports-screens
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:smallScreens="true"
+            android:xlargeScreens="true"/>
+
+</manifest>

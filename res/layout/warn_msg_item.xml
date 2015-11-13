@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:descendantFocusability="blocksDescendants"
+              android:gravity="center_vertical"
+              android:padding="5dp"
+              android:orientation="vertical"
+              android:showDividers="middle">
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+        <CheckBox
+                android:id="@+id/check_msg"
+                android:layout_width="30sp"
+                android:layout_height="fill_parent"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"/>
+        <TextView
+                android:id="@+id/warn_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:text="1111"
+                android:textColor="#1f1f1f"
+                android:textSize="16sp"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:weightSum="2">
+        <TextView
+                android:id="@+id/warn_msg_wtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:text="2015-06-30 11:22:33"
+                android:textColor="#999"
+                android:textSize="11sp"
+                android:layout_weight="1"/>
+        <TextView
+                android:id="@+id/warn_msg_ctime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="end"
+                android:text="2015-06-30 11:22:33"
+                android:textColor="#999"
+                android:textSize="11sp"
+                android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

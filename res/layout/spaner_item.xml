@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    android:layout_height="60dp"
+    android:orientation="horizontal" 
+    android:background="@drawable/title_bg">
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView 
+        android:id="@+id/baby_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_no_photo"
+      android:layout_centerVertical="true"
+        />
+    <TextView 
+        android:id="@+id/baby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小明"
+        android:layout_toRightOf="@+id/baby_photo"
+        android:layout_centerVertical="true"
+        />
+    
+    </RelativeLayout>
+
+</LinearLayout>

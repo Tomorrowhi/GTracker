@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/transparent"
+        >
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/marker_pop_bg"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                <TextView
+                        android:id="@+id/nameTV"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="位置：广东省 "
+                        android:textColor="#3e3a39"
+                        android:textSize="13sp"
+                        android:paddingRight="5dp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                    <TextView
+                            android:id="@+id/locationTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="定位方式：WIFI "
+                            android:textColor="#3e3a39"
+                            android:textSize="13sp"/>
+
+                    <TextView
+                            android:id="@+id/distanceTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="距离：1M"
+                            android:textColor="#3e3a39"
+                            android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                    <TextView
+                            android:id="@+id/jdTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="广东省 深圳市 "
+                            android:textColor="#3e3a39"
+                            android:textSize="13sp"/>
+
+                    <TextView
+                            android:id="@+id/wdTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="广东省 深圳市 "
+                            android:textColor="#3e3a39"
+                            android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        <TextView
+                                android:id="@+id/timeTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="时间：10-12 09:09:53"
+                                android:textColor="#3e3a39"
+                                android:textSize="13sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        <ImageView
+                                android:id="@+id/popleft1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/elec_icon_100"
+                                android:visibility="gone"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/marker_elec"
+                                android:textColor="#3e3a39"
+                                android:textSize="13sp"/>
+
+                        <TextView
+                                android:id="@+id/dlTV"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:text="3.71"
+                                android:textColor="#69a823"
+                                android:textSize="13sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#dcdcdc"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:weightSum="10">
+
+                    <!--导航到这里-->
+                    <LinearLayout
+                            android:id="@+id/navLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/selector_pressed"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_nav"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="1dp"
+
+                                android:text="@string/marker_nav"
+                                android:textColor="#3e3a39"
+                                android:textSize="14sp"/>
+                    </LinearLayout>
+                    <!--
+                            <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#dcdcdc" />
+
+                            <LinearLayout
+                                android:id="@+id/shareLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/icon_share" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="@string/marker_share"
+                                    android:textColor="#3e3a39"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                     -->
+                    <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#dcdcdc"/>
+
+                    <!--历史轨迹-->
+                    <LinearLayout
+                            android:id="@+id/historyTrailLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/selector_pressed"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="1dp"
+                                android:text="@string/history_location_str"
+                                android:textColor="#3e3a39"
+                                android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#dcdcdc"/>
+
+                    <!--即使定位-->
+                    <LinearLayout
+                            android:id="@+id/locationLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/selector_pressed"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="1dp"
+                                android:text="@string/marker_location_now"
+                                android:textColor="#3e3a39"
+                                android:textSize="14sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/shareDetailLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:visibility="gone">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#dcdcdc"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                        <LinearLayout
+                                android:id="@+id/weiboLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                            <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/icon_share_weibo"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="@string/marker_share_weibo"
+                                    android:textColor="#3e3a39"
+                                    android:textSize="13sp"/>
+                        </LinearLayout>
+
+                        <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#dcdcdc"/>
+
+                        <LinearLayout
+                                android:id="@+id/weixinLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                            <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/icon_share_weixin"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="@string/marker_share_weixin"
+                                    android:textColor="#3e3a39"
+                                    android:textSize="13sp"/>
+                        </LinearLayout>
+
+                        <TextView
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#dcdcdc"/>
+
+                        <LinearLayout
+                                android:id="@+id/qzoneLayout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                            <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/icon_share_qzone"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="@string/marker_share_qzone"
+                                    android:textColor="#3e3a39"
+                                    android:textSize="13sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+            <ImageButton
+                    android:id="@+id/customer_popwindow_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/delete_normal"
+                    android:layout_centerVertical="true"
+                    />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

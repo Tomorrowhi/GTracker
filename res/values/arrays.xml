@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="relation_family">
+        <item>@string/pl_select</item>
+        <item>@string/rel_father</item>
+        <item>@string/rel_mother</item>
+        <item>@string/rel_grand_father</item>
+        <item>@string/rel_grand_mother</item>
+    </string-array>
+    <string-array name="relation_friend">
+        <item>@string/pl_select</item>
+        <item>@string/rel_uncle</item>
+        <item>@string/rel_aunt</item>
+        <item>@string/rel_friend</item>
+    </string-array>
+</resources>

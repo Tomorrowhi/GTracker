@@ -1,0 +1,282 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_bg">
+
+        <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_back2"/>
+
+        <LinearLayout
+                android:id="@+id/headerMidLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/titleNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/register_title"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarThumbVertical="@color/transparent"
+            >
+
+        <LinearLayout
+                android:id="@+id/registLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+            <ImageView
+                    android:id="@+id/logoIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/logo_normal"/>
+
+            <View style="@style/regist_item_line"/>
+            <!-- 手机号 -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        style="@style/regist_item_IV"
+                        android:src="@drawable/regist_phone"/>
+
+                <TextView
+                        style="@style/regist_item_TV"
+                        android:text="手机号     "/>
+
+                <EditText
+                        android:id="@+id/phoneET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLength="15"
+                        android:background="@null"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                    android:id="@+id/notifyView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/phone_err_notify"
+                    android:textColor="@color/red"
+                    android:visibility="gone"/>
+            <View style="@style/regist_item_line"/>
+
+            <!--验证码 -->
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <ImageView
+                        android:id="@+id/identifyinCodeIV"
+                        style="@style/regist_item_IV"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/regist_handphone"/>
+
+                <TextView
+                        android:id="@+id/identifyinCodeTV"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/identifyinCodeIV"
+                        style="@style/regist_item_TV"
+                        android:text="验证码     "/>
+
+                <EditText
+                        android:id="@+id/validET"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/identifyinCodeTV"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:maxLength="8"
+                        android:background="@null"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"/>
+                <Button
+                        android:layout_centerVertical="true"
+                        android:id="@+id/validBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:text="@string/get_valid_hint"
+                        android:textColor="#14b9f5"
+                        android:textSize="12sp"
+                        android:background="@null"/>
+            </RelativeLayout>
+
+            <View style="@style/regist_item_line"/>
+
+            <!--密码-->
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <ImageView
+                        android:id="@+id/passwordIV"
+                        style="@style/regist_item_IV"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/regist_password"/>
+
+                <TextView
+                        android:id="@+id/passwordTV"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/passwordIV"
+                        style="@style/regist_item_TV"
+                        android:text="密码         "/>
+
+                <EditText
+                        android:layout_centerVertical="true"
+                        android:id="@+id/pwdET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pwd_hint"
+                        android:inputType="textPassword"
+                        android:maxEms="20"
+                        android:background="@null"
+                        android:maxLength="20"
+                        android:layout_toRightOf="@id/passwordTV"
+                        android:minEms="6"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"/>
+
+            </RelativeLayout>
+
+
+            <View style="@style/regist_item_line"/>
+
+            <!--确认密码-->
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                <ImageView
+                        android:id="@+id/comfirmPasswordIV"
+                        style="@style/regist_item_IV"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/regist_compwd"/>
+
+                <TextView
+                        android:id="@+id/comfirmPasswordTV"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/comfirmPasswordIV"
+                        style="@style/regist_item_TV"
+                        android:text="确认密码 "/>
+
+                <EditText
+                        android:id="@+id/pwdConfirmET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/comfirmPasswordTV"
+                        android:hint="@string/pwd_hint"
+                        android:layout_centerVertical="true"
+                        android:inputType="textPassword"
+                        android:maxEms="20"
+                        android:maxLength="20"
+                        android:minEms="6"
+                        android:background="@null"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"/>
+            </RelativeLayout>
+
+
+            <View style="@style/regist_item_line"/>
+
+            <Button
+                    android:id="@+id/registBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_selector"
+                    android:text="@string/regist_str"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+            <LinearLayout
+                    android:id="@+id/protocolLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/protocol_notify"
+                        android:textColor="@color/pwd_f_r_color"/>
+
+                <TextView
+                        android:id="@+id/protocolTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/protocol_title"
+                        android:textColor="@color/pwd_f_r_color"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

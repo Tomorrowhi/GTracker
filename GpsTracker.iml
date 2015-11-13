@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager" forced_jdk="true">
+    <libelement value="jar://$MODULE_DIR$/libs/BaiduLBS_Android.jar!/" />
+    <conelement value="com.android.ide.eclipse.adt.DEPENDENCIES" />
+    <src_description expected_position="3">
+      <src_folder value="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK" expected_position="0" />
+      <src_folder value="com.android.ide.eclipse.adt.LIBRARIES" expected_position="1" />
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="4" />
+      <src_folder value="file://$MODULE_DIR$/gen" expected_position="5" />
+    </src_description>
+  </component>
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration>
+        <proGuardCfgFiles>
+          <file>file://E:/Program Files/Java/jdk1.7.0_45/tools/proguard/proguard-android.txt</file>
+        </proGuardCfgFiles>
+        <option name="UPDATE_PROPERTY_FILES" value="true" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/bin/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" generated="true" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android 5.1.1 Google APIs" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.ideaLibSources/android-async-http-1.4.6-sources.jar!/" />
+          <root url="file://F:/WorkSet2/xUtils/library/src" />
+          <root url="jar://$USER_HOME$/.ideaLibSources/android-async-http-1.4.8-sources.jar!/" />
+          <root url="file://F:/WorkSet2/AndroidEventBus/src" />
+          <root url="jar://$USER_HOME$/.ideaLibSources/universal-image-loader-1.9.4-sources.jar!/" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
+      </library>
+    </orderEntry>
+  </component>
+</module>

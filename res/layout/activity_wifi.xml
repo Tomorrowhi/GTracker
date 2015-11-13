@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_bg">
+
+        <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_back2"/>
+
+        <LinearLayout
+                android:id="@+id/headerMidLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/titleNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加WIFI"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarThumbVertical="@color/transparent"
+            >
+
+
+        <LinearLayout
+                android:id="@+id/wifiRootLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+
+            <LinearLayout style="@style/wifi_item_LL">
+                <TextView
+                        android:text="WIFI 1"
+                        style="@style/wifi_item_TV"/>
+                <EditText
+                        android:id="@+id/wifiET"
+                        style="@style/wifi_item_ET"/>
+
+                <ImageButton
+                        android:id="@+id/wifiBtn"
+                        style="@style/wifi_item_IBtn"/>
+            </LinearLayout>
+
+            <FrameLayout style="@style/wifi_item_pwd_FL">
+
+                <EditText
+                        android:id="@+id/pwdET"
+                        style="@style/wifi_item_pwd_ET"/>
+
+                <ImageButton
+                        android:id="@+id/pwdBtn"
+                        style="@style/wifi_item_pwd_IBtn"/>
+            </FrameLayout>
+
+            <View style="@style/wifi_item_line"/>
+
+            <LinearLayout style="@style/wifi_item_LL">
+                <TextView
+                        android:text="WIFI 2"
+                        style="@style/wifi_item_TV"/>
+                <EditText
+                        android:id="@+id/wifiET2"
+                        style="@style/wifi_item_ET"/>
+
+                <ImageButton
+                        android:id="@+id/wifiBtn2"
+                        style="@style/wifi_item_IBtn"/>
+            </LinearLayout>
+
+            <FrameLayout style="@style/wifi_item_pwd_FL">
+
+                <EditText
+                        android:id="@+id/pwdET2"
+                        style="@style/wifi_item_pwd_ET"/>
+
+                <ImageButton
+                        android:id="@+id/pwdBtn2"
+                        style="@style/wifi_item_pwd_IBtn"/>
+            </FrameLayout>
+
+            <View style="@style/wifi_item_line"/>
+
+            <LinearLayout style="@style/wifi_item_LL">
+                <TextView
+                        android:text="WIFI 3"
+                        style="@style/wifi_item_TV"/>
+                <EditText
+                        android:id="@+id/wifiET3"
+                        style="@style/wifi_item_ET"/>
+
+                <ImageButton
+                        android:id="@+id/wifiBtn3"
+                        style="@style/wifi_item_IBtn"/>
+            </LinearLayout>
+
+            <FrameLayout style="@style/wifi_item_pwd_FL">
+
+                <EditText
+                        android:id="@+id/pwdET3"
+                        style="@style/wifi_item_pwd_ET"/>
+
+                <ImageButton
+                        android:id="@+id/pwdBtn3"
+                        style="@style/wifi_item_pwd_IBtn"/>
+            </FrameLayout>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/completeBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/regist_btn_bg"
+                        android:text="@string/complete"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#14b9f5"/>
+
+                <Button
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/icon_delete_bg"
+                        android:text="@string/delete"
+                        android:textColor="#eb6a9f"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

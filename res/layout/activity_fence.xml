@@ -1,0 +1,236 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#e6e6e6"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_bg">
+
+        <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_back2"/>
+
+        <LinearLayout
+                android:id="@+id/headerMidLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/titleNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/fence_title"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <com.amap.api.maps.MapView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                >
+            <TextView
+                    android:id="@+id/fence_text_view_radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="半径：500米"
+                    android:textSize="20dp"
+                    android:textColor="@color/blue"
+                    />
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/fence_seekbar_r_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:visibility="gone"
+                >
+          <!--  android:background="@drawable/chat_content_edit"-->
+            <TextView
+                    android:id="@+id/fence_left_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:text="300米"
+                    android:textSize="15sp"
+                    />
+            <SeekBar
+                    android:id="@+id/fence_seekbar"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:max="7"
+                    android:progress="0"
+                    android:minHeight="2dp"
+                    android:maxHeight="2dp"
+                    android:progressDrawable="@drawable/seekbar_layer_list"
+                    android:thumb="@drawable/shape_seelbar_circular"
+                    android:layout_toRightOf="@+id/fence_left_min"
+                    />
+            <TextView
+                    android:id="@+id/fence_left_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/fence_seekbar"
+                    android:text="1000米"
+                    android:textSize="15sp"
+                    />
+        </RelativeLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:padding="15dp"
+                android:background="#ebebeb">
+
+            <TextView
+                    android:visibility="gone"
+                    android:id="@+id/notifyView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/fence_profile"
+                    android:textColor="@color/dimgray"/>
+
+            <LinearLayout
+                    android:id="@+id/setup_fence_name_area"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_marginBottom="10dp"
+                    >
+                <TextView
+                        android:id="@+id/setup_fence_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fence_name"
+                        android:textSize="20sp"
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit_fence"
+                        android:textSize="20sp"
+                        android:textColor="@color/gray"
+                        />
+            </LinearLayout>
+
+
+            <Button
+                    android:id="@+id/fenceSetupBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fence_setup_str"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:background="@drawable/commit_button_bg"
+                    android:layout_gravity="center_horizontal"
+
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#fcfcfc"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                android:weightSum="2">
+
+            <LinearLayout
+                    android:id="@+id/choiceRadiusLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_radius"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/fence_choice_radius"
+                        android:textColor="@color/dimgray"
+                        android:textSize="18sp"/>
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#a4a3a2"/>
+
+
+            <LinearLayout
+                    android:id="@+id/choiceTimeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_time"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/fence_choice_time"
+                        android:textColor="@color/dimgray"
+                        android:textSize="18sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

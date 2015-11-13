@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="10dip"
+              android:paddingLeft="6dip"
+              android:descendantFocusability="blocksDescendants"
+              android:paddingRight="6dip">
+
+    <RelativeLayout
+            android:id="@+id/baby_group_item_layout_root"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            >
+
+        <RelativeLayout
+                android:id="@+id/baby_group_item_layout_topcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip">
+
+            <RelativeLayout
+                    android:id="@+id/baby_group_item_layout_avatar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="6dip">
+
+                <com.bct.gpstracker.view.CircleImageView
+                        android:id="@+id/baby_group_userImage"
+                        android:layout_width="36dip"
+                        android:layout_height="36dip"
+                        android:layout_alignParentLeft="true"
+                        android:focusable="false"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_no_photo"/>
+
+                <LinearLayout
+                        android:id="@+id/feed_item_layout_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center">
+
+                    <TextView
+                            android:id="@+id/baby_group_message_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color_gray"
+                            android:text="时间"
+                            android:textSize="15sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dip"
+                        android:layout_toLeftOf="@+id/feed_item_layout_time"
+                        android:layout_toRightOf="@+id/baby_group_userImage"
+                        android:gravity="center_vertical"
+                        android:minHeight="36dip"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/baby_group_userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="姓名"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="16sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/baby_group_user_message_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/baby_group_item_layout_avatar"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="3dip"
+                    android:textColor="@color/black"
+                    android:text="内容"
+                    android:textSize="18sp"/>
+
+            <GridView
+                    android:id="@+id/feed_item_gridview_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/baby_group_user_message_content"
+                    android:layout_marginTop="3dip"
+                    android:layout_marginBottom="3dp"
+                    android:visibility="gone"
+                    android:focusable="false"
+                    android:horizontalSpacing="1dp"
+                    android:verticalSpacing="1dp"
+                    android:scaleType="centerCrop"/>
+            <TextView
+                    android:id="@+id/feed_item_gridview_content_textview"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/feed_item_gridview_content"
+                    android:layout_alignParentRight="true"
+                    android:text="查看更多..."
+                    android:textColor="@color/blue"
+                    />
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/feed_item_layout_bottomcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below="@+id/baby_group_item_layout_topcontent"
+                android:background="@drawable/bg_card_inner_bottom"
+                android:duplicateParentState="true">
+
+            <LinearLayout
+                    android:id="@+id/baby_group_commentcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_card_inner_bottom_center"
+                    android:gravity="center"
+                    android:minWidth="50dip"
+                    android:clickable="true">
+
+
+                <RelativeLayout
+                        android:id="@+id/baby_group_comment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:padding="5dip"
+                        android:gravity="center_vertical"
+                        >
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_reply"
+                            android:layout_marginRight="2dp"
+                            android:layout_toLeftOf="@+id/baby_group_item_htv_commentcount"
+                            android:layout_alignBottom="@+id/baby_group_item_htv_commentcount"
+                            android:layout_alignTop="@+id/baby_group_item_htv_commentcount"/>
+
+                    <TextView
+                            android:id="@+id/baby_group_item_htv_commentcount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:text="10"
+                            android:background="@null"
+                            android:textColor="@color/deepskyblue"
+                            android:textSize="18sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

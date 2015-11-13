@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="drop_down_list_attr">
+        <attr name="isDropDownStyle" format="boolean"/>
+        <attr name="isOnBottomStyle" format="boolean"/>
+        <attr name="isAutoLoadOnBottom" format="boolean"/>
+    </declare-styleable>
+
+    <!--字体发光-->
+    <declare-styleable name="MagicTextView">
+        <attr name="innerShadowColor" format="color"/>
+        <attr name="innerShadowRadius" format="dimension"/>
+        <attr name="innerShadowDx" format="dimension"/>
+        <attr name="innerShadowDy" format="dimension"/>
+
+        <attr name="outerShadowColor" format="color"/>
+        <attr name="outerShadowRadius" format="dimension"/>
+        <attr name="outerShadowDx" format="dimension"/>
+        <attr name="outerShadowDy" format="dimension"/>
+
+        <attr name="typeface" format="string"/>
+
+        <attr name="foreground" format="reference|color"/>
+        <attr name="background" format="reference|color"/>
+
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="strokeMiter" format="dimension"/>
+        <attr name="strokeColor" format="color"/>
+        <attr name="strokeJoinStyle">
+            <enum name="miter" value="0"/>
+            <enum name="bevel" value="1"/>
+            <enum name="round" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_bg"
+            android:orientation="horizontal"
+            android:id="@+id/comment_file_heard">
+        <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:background="@drawable/icon_back2"/>
+
+        <TextView
+                android:id="@+id/dividerView"
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/backBtn"
+                android:background="@color/deepskyblue"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remote_control"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/title_text"/>
+        />
+    </RelativeLayout>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/transparent"
+            android:orientation="vertical">
+        <RelativeLayout
+                android:id="@+id/fenceLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/setup_item_bg">
+
+            <ImageView
+                    android:id="@+id/fenceLayout_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/my_icon_fence"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/fenceLayout_iv"
+                    android:text="@string/setup_fence"
+                    android:textColor="#2c2c2c"
+                    android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/alarmLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/setup_item_bg">
+
+            <ImageView
+                    android:id="@+id/alarmLayout_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/alarm_layout_iv"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/alarmLayout_iv"
+                    android:text="@string/setup_alarm"
+                    android:textColor="#2c2c2c"
+                    android:textSize="16sp"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/limitLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/setup_item_bg">
+
+            <ImageView
+                    android:id="@+id/limitLayout_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/limit_layout_iv"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/limitLayout_iv"
+                    android:text="@string/setup_rest_time"
+                    android:textColor="#2c2c2c"
+                    android:textSize="16sp"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/audioControl"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/setup_item_bg">
+
+            <ImageView
+                    android:id="@+id/audioControl_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/my_icon_rest"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/audioControl_iv"
+                    android:text="@string/setup_auio_control"
+                    android:textColor="#2c2c2c"
+                    android:textSize="16sp"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/wifiLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/setup_item_bg">
+
+            <ImageView
+                    android:id="@+id/wifiLayout_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/wifi_layout_iv"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/wifiLayout_iv"
+                    android:text="@string/my_wifi"
+                    android:textColor="#2c2c2c"
+                    android:textSize="16sp"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/powerLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/setup_item_bg">
+
+            <ImageView
+                    android:id="@+id/powerLayout_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/power_layout_iv"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/powerLayout_iv"
+                    android:text="@string/setup_remote_close"
+                    android:textColor="#2c2c2c"
+                    android:textSize="16sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

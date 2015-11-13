@@ -1,0 +1,241 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f7f7f7"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_bg">
+
+        <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_back2"/>
+
+        <LinearLayout
+                android:id="@+id/headerMidLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/titleNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/about_title"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+            <RelativeLayout
+                    android:id="@+id/aboutOfficalwebRL"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:text="官方网站"
+                          android:layout_marginLeft="5dp"
+                          android:textColor="@color/black"
+                          android:textSize="18sp"
+                          android:layout_centerVertical="true"
+                        />
+
+                <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_nextbtn"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#c7c7c7"/>
+
+            <RelativeLayout
+                    android:id="@+id/aboutVersionRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/aboutVersionDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/about_version"
+                        android:textColor="@color/black"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/versionTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/aboutVersionDes"
+                        android:text="Ver 1.0"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/aboutVersionTV"
+                        android:textColor="#858585"
+                        android:layout_below="@id/aboutVersionDes"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/about_havenew_version"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="远程升级"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:textSize="18sp"/>
+                <ImageView
+                        android:id="@+id/checkVerIV"
+                        android:layout_width="30dp"
+                        android:visibility="gone"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_nextbtn"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+
+
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#c7c7c7"/>
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="意见反馈"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/feedback_edit_bg"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/about_feedback_title"
+                            android:textColor="#202020"
+                            android:textSize="15sp"/>
+
+                    <TextView
+                            android:id="@+id/notifyTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/about_feedback_num"
+                            android:textColor="#202020"
+                            android:textSize="15sp"/>
+                </RelativeLayout>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#c7c7c7"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"/>
+
+                <EditText
+                        android:id="@+id/contentET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:inputType="textMultiLine"
+                        android:textColor="#202020"
+                        android:gravity="top"
+                        android:hint="请在此输入您的意见或建议，如有需要，我们会与您帐号对应的手机号联系！"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="15sp"/>
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/commitBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/commit_button_bg"
+                    android:gravity="center"
+                    android:text="@string/commit"
+                    android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

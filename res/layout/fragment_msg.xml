@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <com.bct.gpstracker.view.ClearEditText
+            android:id="@+id/filter_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/btn_search"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawablePadding="10dp"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:background="@drawable/ui_search_edit_bottom"
+            />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.bct.gpstracker.fix.swipemenu.SwipeMenuListView
+                android:id="@+id/msg_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF4F4F4"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                />
+
+    </LinearLayout>
+</LinearLayout>

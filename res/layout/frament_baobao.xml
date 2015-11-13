@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/babyLocationLayout"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_bg">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/main_bb"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_text"/>
+
+        <Spinner
+                android:id="@+id/photo_sp"
+                android:layout_width="@dimen/sp_w"
+                android:layout_height="@dimen/sp_h"
+                android:spinnerMode="dropdown"
+                android:visibility="gone"/>
+
+        <LinearLayout
+                android:id="@+id/listLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <com.bct.gpstracker.view.CircleImageView
+                    android:id="@+id/photoIV"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:scaleType="centerCrop"/>
+
+            <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:maxEms="4"
+                    android:ellipsize="end"
+                    android:textSize="18sp"/>
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:src="@drawable/baby_main_list"/>
+
+        </LinearLayout>
+
+
+        <!--TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sp_h"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/baby_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_zise" /-->
+
+        <ImageView
+                android:visibility="gone"
+                android:id="@+id/voiceBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/more_menu"/>
+    </RelativeLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.amap.api.maps.MapView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <LinearLayout
+                android:id="@+id/recorrectLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebebeb"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <TextView
+                    android:id="@+id/notifyView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/recorrect_notify"
+                    android:textColor="@color/dimgray"/>
+
+            <Button
+                    android:id="@+id/confirmBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/fence_setup_btn"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/confirm"
+                    android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/successLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebebeb"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/recorrect_success"
+                    android:textColor="@color/dimgray"/>
+        </LinearLayout>
+
+        <ImageButton
+                android:id="@+id/locationBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@null"
+                android:visibility="gone"
+                android:src="@drawable/chat_icon_location"/>
+
+
+        <!--历史轨迹的控制器-->
+        <RelativeLayout
+                android:layout_gravity="bottom"
+                android:id="@+id/historyRL"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/bg_grey_ellipse"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/historyHourTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:text="@string/history_track_none"
+                        android:paddingLeft="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/shape_circle_rect_gray"
+                        android:visibility="gone"
+                        />
+
+                <com.bct.gpstracker.view.TextMoveLayout
+                        android:layout_marginTop="22dp"
+                        android:id="@+id/textMoveLayout"
+                        android:layout_below="@id/historyHourTV"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"/>
+
+
+
+                <SeekBar
+                        android:layout_below="@id/textMoveLayout"
+                        android:id="@+id/historySeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:max="86400"
+                        android:progressDrawable="@drawable/bg_history_seekbar"
+                        android:maxHeight="4dp"
+                        android:minHeight="4dp"
+                        android:thumb="@drawable/shape_cycle"
+                        android:progress="1"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                <LinearLayout
+                        android:layout_below="@id/historySeekBar"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/historyControlLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+                    <ImageView
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/hisControlStarOrPauseIV"
+                            android:layout_width="50dp" android:layout_height="50dp"
+                            android:src="@drawable/location_history_pause"/>
+
+
+                </LinearLayout>
+
+
+
+
+
+            <Button
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/hisControlStopBtn"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:text="关闭"
+                    android:textColor="@color/comm_sky_blue"
+                    android:layout_height="30dp"
+                   />
+
+                <View
+                        android:layout_marginTop="3dp"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_toLeftOf="@id/hisControlStopBtn"
+                        android:background="#D5D5D5"
+                        />
+
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

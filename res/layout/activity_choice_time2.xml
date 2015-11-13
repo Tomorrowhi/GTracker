@@ -1,0 +1,2843 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <!-- <ViewFlipper
+        android:id="@+id/scorecard_view_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:flipInterval="1000"
+        android:persistentDrawingCache="animation" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/title_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/title_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/title_back"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/logo_stgolf"
+                     />
+                
+                <TextView
+                    android:id="@+id/title_tvtag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/title_logo"
+                    android:gravity="center_vertical"
+                    android:textColor="#ff7f50"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="12sp"
+                    android:text="正在记分中..."
+                     />
+
+                <TextView
+                    android:id="@+id/scorecard_title_parkname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/scorecard_title_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/scorecard_title_parkname"
+                    android:layout_marginRight="8dp"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                     />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:text="球洞"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ssdk_auth_title_back" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="1"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ssdk_auth_title_back" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="2"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ssdk_auth_title_back" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="3"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="4"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="5"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="6"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="7"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="8"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="9"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum1_text10"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="#7777ff"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:text="前九洞"
+                    android:textColor="#000"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:gravity="center_horizontal"
+                    android:text="标准杆"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum2_text10"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_horizontal" >
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:gravity="center_horizontal"
+                    android:text="难度系数"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/scoresum20_text10"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFF"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#000" />
+
+            <LinearLayout
+                android:id="@+id/user1_rel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:id="@+id/user1_rel_lin"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:orientation="vertical" >
+                    
+                    <TextView
+                        android:id="@+id/user1_rel_lin_nickname1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+                    
+                     <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:gravity="center" >
+
+                        <TextView
+                            android:id="@+id/user1_sumscore_ganshu1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/user1_sumscore_tuigan1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="4dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/user1_rel_lin_1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/scorecard_user1_tee"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+                    
+                    <TextView
+                        android:id="@+id/scorecard_user1_tee_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/scoresum3_text1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum3_text2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum3_text3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum3_text4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum3_text5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum3_text6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum3_text7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum3_text8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum3_text9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum3_text10"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center" >
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user1_scoresum10"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum4_text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum5_text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000" />
+
+            <LinearLayout
+                android:id="@+id/user2_rel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:id="@+id/user2_rel_lin"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/user2_rel_lin_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+                    
+                     <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/user2_sumscore_ganshu1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/user2_sumscore_tuigan1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="4dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/user2_rel_lin_1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/scorecard_user2_tee"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+                    
+                    <TextView
+                        android:id="@+id/scorecard_user2_tee_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                   
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/scoresum6_text1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum6_text2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum6_text3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum6_text4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum6_text5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum6_text6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum6_text7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum6_text8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum6_text9"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum6_text10"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center" >
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user2_scoresum10"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum7_text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum8_text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000" />
+
+            <LinearLayout
+                android:id="@+id/user3_rel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:id="@+id/user3_rel_lin"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/user3_rel_lin_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/user3_sumscore_ganshu1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/user3_sumscore_tuigan1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="4dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/user3_rel_lin_1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/scorecard_user3_tee"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+                    
+                    <TextView
+                        android:id="@+id/scorecard_user3_tee_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/scoresum9_text1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum9_text2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum9_text3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum9_text4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum9_text5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum9_text6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum9_text7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum9_text8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum9_text9"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum9_text10"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center" >
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user3_scoresum10"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum10_text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum11_text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000" />
+
+            <LinearLayout
+                android:id="@+id/user4_rel"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:id="@+id/user4_rel_lin"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/user4_rel_lin_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/user4_sumscore_ganshu1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/user4_sumscore_tuigan1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="4dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/user4_rel_lin_1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="#228b22"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/scorecard_user4_tee"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+                    
+                    <TextView
+                        android:id="@+id/scorecard_user4_tee_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/scoresum12_text1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum12_text2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum12_text3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum12_text4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum12_text5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum12_text6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum12_text7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum12_text8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum12_text9"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <TextView
+                            android:id="@+id/scoresum12_text10"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center" >
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="wrap_content"
+                            android:background="#000" />
+
+                        <LinearLayout
+                            android:id="@+id/user4_scoresum10"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="#55ff55"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/scoresum13_text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/scoresum14_text10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="4dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ViewFlipper>
+ -->
+</LinearLayout>

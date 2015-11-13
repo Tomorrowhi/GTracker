@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+    <LinearLayout
+            android:id="@+id/upload_exception_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exception_err_upload"
+                    android:textSize="18sp"
+                    android:textColor="@color/comm_sky_blue"
+                    />
+            <TextView
+                    android:id="@+id/upload_exception_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="10"
+                    android:textColor="@color/comm_sky_blue"
+                    />
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/upload_exception_dialog"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exception_err_title"
+                    android:textSize="18sp"
+                    android:textColor="@color/red"
+                    />
+        </RelativeLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/exception_err_msg"
+                    android:textColor="#A19D94"
+                    android:padding="5dp"
+                    android:textSize="16sp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/btn_cancel"
+                    android:textSize="18sp"
+                    android:background="@null"/>
+            <Button
+                    android:id="@+id/ok"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/btn_ok"
+                    android:textSize="18sp"
+                    android:background="@null"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="200dip"
+              android:orientation="vertical">
+
+
+        <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white"
+                android:focusable="false"/>
+
+        <GridView
+                android:id="@+id/emotionbar_gv_display"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:cacheColorHint="@color/transparent"
+                android:columnWidth="40dip"
+                android:fadingEdge="none"
+                android:gravity="center_horizontal"
+                android:horizontalSpacing="7dip"
+                android:listSelector="@drawable/message_select"
+                android:numColumns="auto_fit"
+                android:paddingLeft="7dip"
+                android:paddingRight="7dip"
+                android:paddingTop="1dip"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollingCache="false"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="7dip"/>
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="38dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+            <RadioGroup
+                    android:id="@+id/emotionbar_rg_inner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                <RadioButton
+                        android:id="@+id/emotionbar_rb_default"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/message_select"
+                        android:button="@null"
+                        android:checked="true"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="Gif"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"/>
+
+                <RadioButton
+                        android:id="@+id/emotionbar_rb_emoji"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/message_select"
+                        android:button="@null"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="Emoji"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
+                <ImageView
+                        android:id="@+id/emotionbar_iv_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0"
+                        android:background="@drawable/message_select"
+                        android:clickable="true"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="5dip"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_topbar_back_normal"/>
+            </RadioGroup>
+        </LinearLayout>
+
+
+
+</LinearLayout>

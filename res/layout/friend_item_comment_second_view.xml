@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+    <!--二级评论-->
+    <TextView
+            android:id="@+id/baby_listview_item_comment_tv_username_secondA"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:text="A用户"
+            android:textColor="@color/dodgerblue"/>
+    <TextView
+            android:id="@+id/baby_listview_item_comment_tv_username_second"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="回复"
+            android:textSize="19sp"
+            android:textColor="#383630"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/baby_listview_item_comment_tv_username_secondA"
+            />
+
+    <TextView
+            android:id="@+id/baby_listview_item_comment_tv_username_secondB"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:text="B用户"
+            android:textColor="@color/dodgerblue"
+            android:layout_toEndOf="@+id/baby_listview_item_comment_tv_username_second"
+            />
+
+    <TextView
+            android:id="@+id/baby_listview_item_comment_tv_content_second"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:textSize="19sp"
+            android:text="评论内容"
+            android:textColor="#383630"
+            android:layout_toEndOf="@+id/baby_listview_item_comment_tv_username_secondB"/>
+    <TextView
+            android:id="@+id/baby_listview_item_comment_tv_time_second"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:text="评论时间"
+            android:textColor="#bcbcbc"
+            android:layout_toEndOf="@+id/baby_listview_item_comment_tv_content_second"/>
+
+</RelativeLayout>

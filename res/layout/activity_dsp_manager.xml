@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:descendantFocusability="afterDescendants"
+        >
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_bg"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dsp_manager"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_text"/>
+    </RelativeLayout>
+    <LinearLayout
+            android:id="@+id/dsp_manager_ok_get_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="afterDescendants"
+            android:visibility="gone"
+            >
+        <com.bct.gpstracker.fix.swipemenu.SwipeMenuListView
+                android:id="@+id/music_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF4F4F4"/>
+
+    </LinearLayout>
+    <RelativeLayout
+            android:id="@+id/dsp_manager_no_get_data"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/load_audio_list_failed"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                />
+    </RelativeLayout>
+</LinearLayout>

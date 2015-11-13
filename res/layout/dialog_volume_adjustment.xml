@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp"
+                android:layout_height="match_parent">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_marginLeft="20dp"
+              android:id="@+id/vol_TV"
+                android:layout_marginTop="18dp"
+              android:textSize="20sp"
+              android:text=" "/>
+
+    <SeekBar
+            android:id="@+id/vol_Seekbar"
+            android:layout_toRightOf="@id/vol_TV"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:max="6"/>
+
+
+
+    <Button
+            android:id="@+id/comfirm_Btn"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/vol_Seekbar"
+            android:text="@string/btn_ok"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_selector"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#14b9f5"
+              android:orientation="vertical"
+              android:paddingLeft="5dp"
+        >
+    <LinearLayout
+            android:id="@+id/del_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="5dp">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/menu_icon_clear"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_delete_msg"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,438 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg" >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_back2" />
+
+        <LinearLayout
+            android:id="@+id/headerMidLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/titleNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="@string/fence_title"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp" android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_radius" android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv0"
+                    android:text="名称"
+                    android:textColor="#4c4948"
+                    android:textSize="18sp"
+                    android:layout_weight=".8" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameET"
+                    android:layout_weight="2"
+                    android:hint="名称"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/fence_wait_select"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="@string/fence_edit_prompt"
+                        />
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        >
+                    <Button
+                            android:id="@+id/fence_home"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:text="@string/fence_home"
+                            android:textSize="20sp"
+                            android:background="#8076c5f0"
+                            />
+                    <Button
+                            android:id="@+id/fence_grandmother_home"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/fence_home"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/fence_grandmother_home"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="#8076c5f0"
+                            />
+                    <Button
+                            android:id="@+id/fence_grandma_home"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/fence_grandmother_home"
+                            android:text="@string/fence_grandma_home"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="#8076c5f0"
+                            />
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        >
+                    <Button
+                            android:id="@+id/fence_school"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:text="@string/fence_school"
+                            android:textSize="20sp"
+                            android:background="#8076c5f0"
+                            />
+                    <Button
+                            android:id="@+id/fence_cram_school"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/fence_school"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/fence_cram_school"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="#8076c5f0"
+                            />
+                    <Button
+                            android:id="@+id/fence_teacher_home"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/fence_cram_school"
+                            android:text="@string/fence_teacher_home"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="#8076c5f0"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center|left"
+                android:orientation="horizontal" android:layout_weight="1" android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv0"
+                    android:text="半径 (米)"
+                    android:textColor="#4c4948"
+                    android:textSize="18sp"
+                    android:layout_weight=".5" />
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="300"
+                        android:id="@+id/disTV" android:textColor="@color/gray"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+           <!--   <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#c7c7c7" />
+                -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2" android:layout_weight="1" android:padding="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rest_start_time"
+                    android:textColor="#4c4948"
+                    android:textSize="18sp"
+                    android:layout_weight=".6" />
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="10:10:10"
+                        android:id="@+id/startTimeTV" android:layout_marginLeft="10dp"
+                        android:textColor="@color/link_blue"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2" android:layout_weight="1" android:padding="10dp">
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rest_end_time"
+                        android:textColor="#4c4948"
+                        android:textSize="18sp"
+                    android:layout_weight=".6" />
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="10:10:10"
+                        android:id="@+id/endTimeTV" android:layout_marginLeft="10dp"
+                        android:textColor="@color/link_blue"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/my_icon_alarm" android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv2"
+                    android:text="@string/rest_title_week"
+                    android:textColor="#4c4948"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+          <!--    <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#c7c7c7" />
+                -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cacaca" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <com.bct.gpstracker.view.CheckTextView
+                        android:id="@+id/checkTV7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#f2f2f2"
+                        android:padding="12dp"
+                        android:text="@string/sunday_str" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <com.bct.gpstracker.view.CheckTextView
+                        android:id="@+id/checkTV1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#f2f2f2"
+                        android:padding="12dp"
+                        android:text="@string/monday_str" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <com.bct.gpstracker.view.CheckTextView
+                        android:id="@+id/checkTV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#f2f2f2"
+                        android:padding="12dp"
+                        android:text="@string/tuesday_str" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <com.bct.gpstracker.view.CheckTextView
+                        android:id="@+id/checkTV3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#f2f2f2"
+                        android:padding="12dp"
+                        android:text="@string/wendesday_str" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <com.bct.gpstracker.view.CheckTextView
+                        android:id="@+id/checkTV4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#f2f2f2"
+                        android:padding="12dp"
+                        android:text="@string/thursday_str" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <com.bct.gpstracker.view.CheckTextView
+                        android:id="@+id/checkTV5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#f2f2f2"
+                        android:padding="12dp"
+                        android:text="@string/friday_str" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <com.bct.gpstracker.view.CheckTextView
+                        android:id="@+id/checkTV6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#f2f2f2"
+                        android:padding="12dp"
+                        android:text="@string/saturday_str" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cacaca" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cofirm_btn_bg"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="@color/white" android:layout_weight="1"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

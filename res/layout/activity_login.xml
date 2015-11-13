@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp" >
+
+    <ImageView
+        android:id="@+id/logoIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_normal"
+        />
+
+    <EditText
+        android:id="@+id/phoneET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/login_phone_edit"
+        android:singleLine="true"
+        android:paddingRight="20dp"
+        android:inputType="textAutoComplete"
+        android:paddingLeft="80dp"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/pwdET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingRight="20dp"
+        android:background="@drawable/login_pwd_edit"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:paddingLeft="80dp" android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="26dp"
+            android:background="@drawable/login_selector"
+            android:text="@string/login_str"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/registBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_circle_rect_reg"
+            android:text="@string/regist_str"
+            android:textColor="#14b9f5"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/rememberLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/pwdCB"
+                style="@style/MyCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="0dp"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember_pwd_str"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/pwd_f_r_color" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/forgotPwdTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_pwd_str"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/pwd_f_r_color" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/verTv"
+            android:layout_gravity="center_vertical"
+            android:gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>

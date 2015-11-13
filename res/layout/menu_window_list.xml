@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#14b9f5"
+              android:orientation="vertical"
+              android:paddingLeft="5dp"
+        >
+
+    <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/chatLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+        <FrameLayout
+                android:id="@+id/babyLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+            <ImageView
+                    android:id="@+id/photoIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_icon_chat"/>
+
+            <ImageView
+                    android:id="@+id/chatNewIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/icon_notify_small"
+                    android:visibility="gone"/>
+        </FrameLayout>
+
+        <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_chat_str"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/notifyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+        <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_icon_notify"/>
+
+            <ImageView
+                    android:id="@+id/notifyNewIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/icon_notify_small"
+                    android:visibility="gone"/>
+        </FrameLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_alarm_str"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/recorrectLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/menu_icon_recorrect"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_recorrect_str"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+    </LinearLayout>
+    <!--历史轨迹-->
+    <LinearLayout
+            android:id="@+id/historyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/menu_icon_recorrect"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/history_location_str"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/callLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/menu_icon_call"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_call_str"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>
