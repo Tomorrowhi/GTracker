@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import com.bct.gpstracker.AppContext;
+import com.bct.gpstracker.MainActivity;
 import com.bct.gpstracker.R;
 import com.bct.gpstracker.common.Constants;
 import com.bct.gpstracker.util.CommUtil;
@@ -36,8 +38,15 @@ public class LauncherActivity extends Activity {
 //        else
 //            mHandler.sendEmptyMessageDelayed(SWITCH_MAINACTIVITY,2000);
         Intent mIntentMain = new Intent();
-        mIntentMain.setClass(LauncherActivity.this, LoginActivity.class);
+        //正常登录
+//        mIntentMain.setClass(LauncherActivity.this, LoginActivity.class);
+//        LauncherActivity.this.startActivity(mIntentMain);
+//        LauncherActivity.this.finish();
+
+        //跳过登录界面
+        mIntentMain.setClass(LauncherActivity.this, MainActivity.class);
         LauncherActivity.this.startActivity(mIntentMain);
+        AppContext.isEntered = true;
         LauncherActivity.this.finish();
     }  
      
